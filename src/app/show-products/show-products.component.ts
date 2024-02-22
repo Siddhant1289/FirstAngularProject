@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductServiceService } from '../product-service.service';
 
 @Component({
   selector: 'app-show-products',
@@ -10,5 +11,8 @@ import { Component } from '@angular/core';
             </ul>`
 })
 export class ShowProductsComponent {
-  products=["TV", "Fridge", "Mobile"]
+  products : any;
+  constructor(pservice : ProductServiceService){
+      this.products = pservice.getProducts();
+  }
 }
