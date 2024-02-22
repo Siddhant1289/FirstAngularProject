@@ -16,7 +16,9 @@ import { Component } from '@angular/core';
               <select [(ngModel)]="currentImageUrl" (change)="changeImage()">
               <option *ngFor="let imageUrl of imageUrls" [value]="imageUrl">{{ imageUrl }}</option>
               </select>
-              <img [src]="currentImageUrl" alt="Selected Image" height=175 width=300>` 
+              <img [src]="currentImageUrl" alt="Selected Image" height=175 width=300>
+              <myfirst></myfirst>
+              <app-show-products></app-show-products>` 
 })
 export class AppComponent {
   title = 'Default Component';
